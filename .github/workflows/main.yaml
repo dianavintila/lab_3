@@ -3,7 +3,7 @@ on: push
 
 jobs:
   format:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     env:
       CI_JOB_NAME: format
     steps:
@@ -18,7 +18,7 @@ jobs:
         run: flutter pub pub run --enable-asserts ci/bots/format.dart --set-exit-if-changed -n -l 120
 
   analyze:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     env:
       CI_JOB_NAME: analyze
     steps:
